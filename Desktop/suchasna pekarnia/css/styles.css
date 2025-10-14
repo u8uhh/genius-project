@@ -321,3 +321,15 @@ ul{
     background-size: cover;
     background-position: center;
 }
+
+/*.social-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform .15s ease, opacity .15s ease;
+}
+a > .social-icon:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}*/
