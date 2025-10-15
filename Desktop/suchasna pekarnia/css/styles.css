@@ -40,7 +40,9 @@
 }
 
 /*Base*/
-*{
+*, 
+*::after,
+*::before{
 box-sizing: border-box;
 }
 
@@ -63,6 +65,10 @@ body{
 
 h1, h2, h3, h4, h5, h6, p{
     margin-top: 0;
+}
+
+a{
+    display: inline-block;
 }
 
 address{
@@ -242,7 +248,8 @@ ul{
 
 .chefs-list{
     display: flex;
-    gap: 30px;
+    gap: /*40px*/ 30px;
+    /*flex-wrap: wrap;*/
 }
 
 .chefs-item{
@@ -260,12 +267,26 @@ ul{
     margin-bottom: 16px;
 }
 
+.chef-text p{
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child{
+    margin-bottom: 0;
+}
+
 .chef-image{
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 /* Formats section */
+.formats-container{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .format-card{
     height: 444px;
     border: 1px solid lightgray; /*remove*/
@@ -314,6 +335,7 @@ ul{
     width: 44px;
     height: 44px;
     padding: 0;
+    flex-shrink: 0;
     fill: var(--color-primary-dark);
     border-radius: 50%;
     background-color: transparent;
@@ -321,18 +343,60 @@ ul{
     cursor: pointer;
 }
 
-.carousel-button:hover{
+.carousel-button:hover {
     background-color: var(--color-primary-dark);
-    fill: var(--color-primary-light);
+    color: var(--color-primary-light); /* ← стрілка стає білою */
 }
 
 /* Contact section */
+.contact-section{
+    padding-bottom: 96px;
+}
+
+.contact-container{
+    display: flex;
+    gap: 32px;
+}
+
 .contact-title
 {
     margin-bottom: 16px;
 }
 
+.contact-map{
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
+
 /*Footer*/
+.footer{
+    padding: 32px 0;
+}
+
+.footer-container{
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo{
+    display: inline-block;
+}
+
+.footer-nav, .footer-address{
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo, .footer-menu{
+    flex-grow: 1;
+}
+
+.address-list, .address-info{
+    flex-grow: 1;
+}
+
 .address-link{
     color: var(--color-primary-light);
     font-size: 16px;
@@ -352,7 +416,6 @@ ul{
     font-size: 14px;
 }
 
-/*footer*/
 .footer{
     background-color: var(--color-primary-dark);
     background-image: url(../images/footer-background.png);
