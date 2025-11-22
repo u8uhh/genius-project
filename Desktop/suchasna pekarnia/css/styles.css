@@ -351,34 +351,15 @@ ul{
     font-weight: 300;
 }
 
-/* Carousel section*/
-.carousel-button
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    flex-shrink: 0;
-    fill: var(--color-primary-dark);
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--color-primary-dark);
-    cursor: pointer;
-}
-
-.carousel-button:hover {
-    background-color: var(--color-primary-dark);
-    color: var(--color-primary-light); /* ← стрілка стає білою */
-}
-
 /* Contact section */
-.contact-section{
+
+.contact-section
+{
     padding-bottom: 96px;
 }
 
-.contact-container{
+.contact-container
+{
     display: flex;
     gap: 32px;
 }
@@ -388,10 +369,12 @@ ul{
     margin-bottom: 16px;
 }
 
-.contact-map{
+.contact-map
+{
     flex-shrink: 0;
     border: none;
     border-radius: 16px;
+
 }
 
 /*Footer*/
@@ -511,17 +494,23 @@ ul{
 }
 
 .form-field {
+    position: relative;
     margin-bottom: 32px;
 }
 
 .form-label{
-    display: block;
+    /*display: block;*/
+    position: absolute;
+    top: 16px;
+    left: 42px;
 }
 
 /*Form*/
 .form-input{
     padding: 16px 42px;
     width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
     border: 1px solid var(--color-secondary-dark);
     border-radius: 8px;
     background-color: transparent;
@@ -534,4 +523,29 @@ ul{
 
 .form-input::placeholder{
     color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder{
+    color: var(--color-primary-dark);
+}
+
+.form-button{
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.form-terms{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 220px;
+}
+
+.form-terms-link{
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
 }

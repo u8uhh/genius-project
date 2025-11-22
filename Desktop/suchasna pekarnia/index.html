@@ -176,15 +176,36 @@
                         <div class="contact-form">
                             <h2 class="contact-title section-title">Приєднуйся до мережі пекарень</h2>
                             <p>Заповни форму, щоб ми зв'язались з тобою!</p>
+                            <!--Form-->
+                            <form name="contact-form" autocomplete="off">
+                                <div class="form-field">
+                                    <label class="form-label visually-hidden" for="user-name">Ім'я</label>
+                                    <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я"/>
+                                </div>
+
+                                <div class="form-field">
+                                    <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                                    <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон"/>
+                                </div>
+
+                                <div class="form-field">
+                                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                                    <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Електронна пошта"/>
+                                </div>
+
+                                <button class="form-button button" type="submit">Замовити дзвінок</button>
+                                <p class="form-terms">Натискаючи на кнопку в погоджуюсь з 
+                                    <a class="form-terms-link" href="#">політикою конфіденційності</a></p>
+                            </form>
                         </div>
                         <iframe
-                        class="contact-map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163447036115!2d30.48869837606083!3d50.45668098691572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2sde!4v1759614081669!5m2!1suk!2sde" 
-                            width="600" 
-                            height="450" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                            class="contact-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163447036115!2d30.48869837606083!3d50.45668098691572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2sde!4v1759614081669!5m2!1suk!2sde"
+                            width="600"
+                            height="600"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -261,7 +282,7 @@
                 <button class="modal-btn-close" type="button">Close</button>
                 <h2>Замовити дзвінок</h2>
                 <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-                <form name="contact-form" autocomplete="off" novalidate>
+                <form name="modal-form" autocomplete="off" novalidate>
                     <div class="form-field">
                         <label class="form-label visually-hidden" for="user-name">Ім'я</label>
                         <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім'я"/>
@@ -277,9 +298,9 @@
                         <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Електронна пошта"/>
                     </div>
 
-                    <button type="submit">Замовити дзвінок</button>
-                    <p>Натискаючи на кнопку в погоджуюсь з 
-                        <a href="#">політикою конфіденційності</a></p>
+                    <button class="form-button button" type="submit">Замовити дзвінок</button>
+                    <p class="form-terms">Натискаючи на кнопку в погоджуюсь з 
+                        <a class="form-terms-link" href="#">політикою конфіденційності</a></p>
                 </form>
             </div>
         </div>
