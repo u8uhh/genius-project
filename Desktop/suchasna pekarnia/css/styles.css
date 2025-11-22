@@ -358,10 +358,22 @@ ul{
     padding-bottom: 96px;
 }
 
-.contact-container
+/*.contact-container
 {
     display: flex;
     gap: 32px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}*/
+.contact-container {
+    display: flex;
+    align-items: stretch; /* не flex-start */
+    gap: 32px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
 }
 
 .contact-title
@@ -369,13 +381,15 @@ ul{
     margin-bottom: 16px;
 }
 
-.contact-map
-{
-    flex-shrink: 0;
+.contact-map {
+    width: 620px;
+    height: auto;
+    min-height: 100%; /* тягнеться рівно по висоті форми */
     border: none;
     border-radius: 16px;
-
 }
+
+
 
 /*Footer*/
 .footer{
@@ -452,6 +466,7 @@ ul{
     font-size: 14px;
 }
 
+
 /*Modal;*/
 .backdrop{
     position: fixed;
@@ -474,6 +489,7 @@ ul{
     pointer-events: none;
 }
 
+
 /*Modal*/
 .modal{
     position: relative;
@@ -493,19 +509,76 @@ ul{
     right: 40px;
 }
 
+
+/* Forms */
 .form-field {
     position: relative;
     margin-bottom: 32px;
 }
 
-.form-label{
-    /*display: block;*/
+.form-label {
     position: absolute;
     top: 16px;
     left: 42px;
 }
 
+.form-input {
+    padding: 16px 42px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.17;
+    border: 1px solid var(--color-secondary-dark);
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.form-input:focus {
+    border-color: var(--color-brand-normal);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-primary-dark);
+}
+
+.form-button {
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.form-terms {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 220px;
+}
+
+.form-terms-link {
+    color: var(--color-primary-dark);
+    text-underline-offset: 2px;
+}
+
 /*Form*/
+/*.form-field {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-label{
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 42px;
+}
+
 .form-input{
     padding: 16px 42px;
     width: 100%;
@@ -548,4 +621,4 @@ ul{
 .form-terms-link{
     color: var(--color-primary-dark);
     text-underline-offset: 2px;
-}
+}*/
