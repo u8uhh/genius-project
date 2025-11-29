@@ -1,45 +1,15 @@
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 300;
-  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2'); 
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); 
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'); 
-}
-
-@font-face {
-  font-display: swap; 
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../fonts/poppins-v24-latin-900.woff2') format('woff2'); 
-}
-
-:root {
-    --color-primary-dark: #31261a;
-    --color-primary-light: #faf4ea;
-    --color-brand-normal: #819b57;
-    --color-brand-dark: #465929;
-    --color-brand-light: #cfcfbc;
-    --color-secondary-dark: #A28268;
-}
-
+@import "./utilis/fonts";
+@import "./utilis/utilis";
 @import "./base";
+@import "./utilis/variables";
+
+@import "./components/buttons";
+@import "./components/headers";
+@import "./components/hero-section";
+@import "./components/links";
+
+@import "./utilis/mixins";
+
 
 .container{
     width: 100%;
@@ -48,103 +18,19 @@
     padding: 0 24px;
 }
 
-.visually-hidden{
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
 .section {
     padding: 48px 0;
 }
 
-/*Button*/
-.button{
-    padding: 16px 32px;
-    color: var(--color-primary-light);
-    background-color: var(--color-brand-normal);
-    border: 2px solid var(--color-brand-normal);
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
+.circle{
+    @include circle(100px, 100px, #fff);
 }
 
-.button:hover{
-    color: var(--color-brand-dark);
-    background-color: transparent;
+.circle-big{
+    @include circle(200px, 200px, green);
 }
 
-/*Link*/
-.link {
-    color: var(--color-primary-light);
-    text-decoration: none;
-    transition: color 0.3s;
-}
 
-.link:hover {
-    color: var(--color-brand-normal);
-}
-
-/*Header*/
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 32px;
-}
-
-.header-container
-{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-nav{
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    gap: 40px;
-}
-
-.menu{
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-/*Hero*/
-.hero-section{
-    padding: 272px 0;
-    background-image: linear-gradient(
-        102.76deg, 
-        rgba(18, 18, 17, 0.78) 2.03%,
-        rgba(18, 18, 17, 0.6) 58.46%, 
-        rgba(18, 18, 17, 0) 90.36%
-      ),
-      url('../images/hero-section-background.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    /*background-attachment: fixed;*/
-}
-
-.hero-title{
-    margin-bottom: 0;
-    color: var(--color-primary-light);
-    text-align: center;
-    font-size: 128px;
-    font-weight: 900;
-}
-
-.hero-title .accent{
-    color: var(--color-brand-normal);
-}
 
 /*Advantage section*/
 .advantages-section{
@@ -533,60 +419,3 @@
     color: var(--color-primary-dark);
     text-underline-offset: 2px;
 }
-
-/*Form*/
-/*.form-field {
-    position: relative;
-    margin-bottom: 32px;
-}
-
-.form-label{
-    display: block;
-    position: absolute;
-    top: 16px;
-    left: 42px;
-}
-
-.form-input{
-    padding: 16px 42px;
-    width: 100%;
-    font-size: 16px;
-    line-height: 1.17;
-    border: 1px solid var(--color-secondary-dark);
-    border-radius: 8px;
-    background-color: transparent;
-}
-
-.form-input:focus{
-    border-color: var(--color-brand-normal);
-    outline: none;
-}
-
-.form-input::placeholder{
-    color: var(--color-secondary-dark);
-    font-size: 16px;
-    line-height: 1.17;
-}
-
-.form-input:focus::placeholder{
-    color: var(--color-primary-dark);
-}
-
-.form-button{
-    margin: 0 auto 24px;
-    display: block;
-}
-
-.form-terms{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.5;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 220px;
-}
-
-.form-terms-link{
-    color: var(--color-primary-dark);
-    text-underline-offset: 2px;
-}*/
